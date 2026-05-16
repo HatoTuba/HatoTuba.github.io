@@ -1,0 +1,246 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Tu(ğ)ba Hato"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Tu(ğ)ba Hato"
+  description: PhD Candidate in Psychological Methods at Heidelberg University
+  favicon: "/fav.png"
+
+  useBootstrapCDN: false
+
+  mathjax: true
+
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Tu(ğ)ba Hato"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Tu(ğ)ba."
+    subtitle: "PhD Candidate in Psychological Methods"
+    content: "A quantitative psychologist focused on Bayesian cognitive modeling, simulation studies for model evaluation, and the analysis of individual and intra-individual processes in large-scale behavioral data."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/HatoTuba
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/tubahato/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a PhD candidate in Psychological Methods at Heidelberg University, supervised by Dr. Andreas Voss. My research focuses on Bayesian cognitive modeling, simulation-based inference, and the analysis of individual and intra-individual processes in large-scale behavioral data.
+
+      I apply and develop diffusion models (Lévy Flight Model, one-boundary DDM, EZ-Diffusion) to understand decision-making and cognitive processes, working with datasets ranging from controlled laboratory experiments to large epidemiological cohorts.
+    skills:
+      enable: true
+      title: "Skills & Tools:"
+      items:
+        - "Python (numpy, pandas, matplotlib, BayesFlow, scikit-learn)"
+        - "R (tidyverse, ggplot2, Stan, JAGS)"
+        - "Bayesian Statistics & MCMC"
+        - "Cognitive Modeling (DDM, Lévy Flight, EZ-Diffusion)"
+        - "Simulation-Based Inference"
+        - "Git / GitHub"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "Heidelberg University"
+        companyUrl: "https://www.uni-heidelberg.de"
+        jobs:
+          - name: "PhD Candidate, Psychological Methods"
+            date: "2022 - present"
+            content: "Conducting research on Bayesian cognitive modeling, diffusion models, and simulation-based inference. Advisor: Dr. Andreas Voss."
+
+      - company: "Neo Auvra"
+        jobs:
+          - name: "Cognitive Psychologist"
+            date: "2021 - 2022"
+            content: "Applied cognitive psychology expertise in a professional setting."
+
+      - company: "Middle East Technical University (ODTÜ|METU)"
+        companyUrl: "https://www.metu.edu.tr"
+        jobs:
+          - name: "TUBITAK Project Assistant"
+            date: "2022"
+            content: "Contributed to a TUBITAK-funded research project in the Department of Psychology."
+          - name: "Undergraduate Research Intern, Cognitive Sciences"
+            date: "2019"
+            content: "Research internship in the Cognitive Sciences program."
+          - name: "Undergraduate Research Assistant, Department of Psychology"
+            date: "2018 - 2020"
+            content: "Assisted with research projects in the Department of Psychology."
+
+  # Education
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "PhD in Psychological Methods"
+        school:
+          name: "Heidelberg University"
+          url: "https://www.uni-heidelberg.de"
+        date: "2022 - present"
+        content: |-
+          Advisor: Dr. Andreas Voss
+
+          Research focus: Bayesian cognitive modeling, diffusion models, simulation-based inference, and large-scale behavioral data analysis.
+
+      - title: "M.Sc in Cognitive Psychology"
+        school:
+          name: "Middle East Technical University (ODTÜ|METU)"
+          url: "https://www.metu.edu.tr"
+        date: "2020 - 2022"
+        content: |-
+          Advisor: Dr. Aslı Kılıç
+
+          Thesis: [Testing Encoding and Retrieval Dynamics of Pairs Using Probed Recall Task](https://open.metu.edu.tr/handle/11511/98780)
+
+      - title: "B.Sc in Psychology"
+        school:
+          name: "Middle East Technical University (ODTÜ|METU)"
+          url: "https://www.metu.edu.tr"
+        date: "2016 - 2020"
+
+  # Achievements
+  achievements:
+    enable: true
+    items:
+      - title: WOMP-PRIME Travel and Networking Award
+        content: Awarded by the Society of Mathematical Psychology (€500).
+        url: https://www.mathpsych.org
+      - title: Teaching – Good Practices in Reproducible R Programming
+        content: Designed and taught a seminar for Master's students at Heidelberg University (Summer 2025) covering data handling and visualization with tidyverse and ggplot2.
+      - title: Invited Talk – ProSem, Syracuse University
+        content: "Lévy versus Wiener: Assessing the Effects of Model Misspecification on Diffusion Model Parameters. Syracuse, New York, USA (Winter 2024)."
+      - title: Talk – MathPsych/ICCM 2025
+        content: "EPIC Data, EPIC Models: Unraveling Cognitive Decline with Large-Scale Diffusion Modeling. 58th Annual Meeting of the Society for Mathematical Psychology, Ohio State University, Columbus, Ohio, USA."
+      - title: Professional Memberships
+        content: "Trainee Member, Society of Mathematical Psychology · Women of Mathematical Psychology · Graduate Student Member, Psychonomic Society · DFG Research Training Group: Statistical Modeling in Psychology (SMiP)"
+
+  # Projects (Ongoing Research)
+  projects:
+    enable: true
+    title: "Ongoing Research"
+    items:
+      - title: Modeling the EPIC Dataset
+        content: Applied a modified One-boundary DDM to the EPIC-Norfolk dataset (N=8623; ages 48–92) to examine the relationship between response time measures, demographic factors, and future dementia risk over a 10-year follow-up. Analyses combined cognitive modeling (simulation-based inference), survival analysis, and supervised machine learning.
+        badges:
+          - "Diffusion Modeling"
+          - "BayesFlow"
+          - "R"
+          - "Python"
+
+      - title: Time-Varying Parameters with EZ-Diffusion
+        content: Applying EZ-Diffusion to investigate how model parameters change over time within an experiment, incorporating random walk priors in a JAGS model.
+        badges:
+          - "EZ-Diffusion"
+          - "JAGS"
+          - "R"
+
+      - title: Modeling Large-Scale Cognitive Data from Lumosity
+        content: Applying diffusion decision models to multiple reaction-time tasks using simulation-based inference (BayesFlow) to estimate latent decision parameters in large samples. Bayesian structural equation modeling planned to assess the stability and factor structure of DDM parameters across demographic subgroups.
+        badges:
+          - "DDM"
+          - "BayesFlow"
+          - "Bayesian SEM"
+
+  # Contact
+  contact:
+    enable: true
+    content: Feel free to reach out — whether you have a question about my research or want to collaborate.
+    btnName: Email me
+    btnLink: mailto:tuba.hato@gmail.com
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/HatoTuba
+      linkedin: https://www.linkedin.com/in/tubahato/
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

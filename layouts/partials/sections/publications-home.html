@@ -1,0 +1,30 @@
+{{- $pubs := site.Data.publications -}}
+{{- if $pubs -}}
+<section id="publications" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Publications</h3>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 col-md-10 col-12">
+                <ul class="list-unstyled">
+                    {{- range $pubs -}}
+                    <li class="mb-4">
+                        {{- if .link -}}
+                        <a href="{{ .link }}" target="_blank" rel="noreferrer"><strong>{{ .title }}</strong></a>
+                        {{- else -}}
+                        <strong>{{ .title }}</strong>
+                        {{- end -}}
+                        {{- if .authors -}}<br><span>{{ .authors }}</span>{{- end -}}
+                        {{- if or .venue .year -}}
+                        <br><em>
+                        {{- .venue -}}
+                        {{- if and .venue .year }} ({{ .year }}){{- else if .year }}({{ .year }}){{- end -}}
+                        </em>
+                        {{- end -}}
+                    </li>
+                    {{- end -}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{- end -}}

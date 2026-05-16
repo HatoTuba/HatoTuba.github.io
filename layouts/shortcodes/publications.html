@@ -1,0 +1,16 @@
+{{- $pubs := site.Data.publications -}}
+{{- if not $pubs -}}
+<p>No publications found in <code>data/publications.yaml</code>.</p>
+{{- else -}}
+<ul>
+  {{- range $pubs -}}
+    <li>
+      <strong>{{ .title }}</strong>
+      {{- if .authors -}}<br>{{ .authors }}{{- end -}}
+      {{- if .venue -}}<br>{{ .venue }}{{- end -}}
+      {{- if .year -}} ({{ .year }}){{- end -}}
+      {{- if .link -}}<br><a href="{{ .link }}" target="_blank" rel="noreferrer">Link</a>{{- end -}}
+    </li>
+  {{- end -}}
+</ul>
+{{- end -}}
